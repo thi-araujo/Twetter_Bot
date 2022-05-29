@@ -21,7 +21,7 @@ auth.set_access_token("ACCESS_TOKEN", "ACCESS_TOKEN_SECRET")
 
 import tweepy
 
-# Authenticate to Twitter
+# Autenticar no Twitter
 auth = tweepy.OAuthHandler("pGBDoAaEpkliVKBOLwjtcmHGc",
     "xF3g1wrP50b6BlZEd20u4oVfjgH1FGQcuWUzlQO5aUWOufvlhw")
 auth.set_access_token("622518493-6VcLIPprbQbv9wkcBBPvCle8vsjU9fE85Dq9oStl",
