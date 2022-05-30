@@ -39,10 +39,14 @@ except:
 
 import tweepy
 
-# Authenticate to Twitter
+# Autenticar no Twitter
 auth = tweepy.OAuthHandler("CONSUMER_KEY", "CONSUMER_SECRET")
 auth.set_access_token("ACCESS_TOKEN", "ACCESS_TOKEN_SECRET")
 
-# Create API object
+# Criando Objeto API
 api = tweepy.API(auth, wait_on_rate_limit=True,
     wait_on_rate_limit_notify=True)
+
+timeline = api.home_timeline()
+for tweet in timeline:
+    print(f"{tweet.user.name} said {tweet.text}")
