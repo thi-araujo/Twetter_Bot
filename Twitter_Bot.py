@@ -50,3 +50,17 @@ api = tweepy.API(auth, wait_on_rate_limit=True,
 timeline = api.home_timeline()
 for tweet in timeline:
     print(f"{tweet.user.name} said {tweet.text}")
+
+
+# O snippet abaixo busca meu usuário, @Thiago30850075, e imprime seus detalhes, bem como seus 20 seguidores mais recentes:
+
+user = api.get_user("Thiago30850075")
+
+print("User details:")
+print(user.name)
+print(user.description)
+print(user.location)
+
+print("Last 20 Followers:")
+for follower in user.followers():
+    print(follower.name)
