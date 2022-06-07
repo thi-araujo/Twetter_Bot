@@ -181,3 +181,10 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Método de API para curtir qualquer tweet marcar ou remover a curtida
+
+tweets = api.home_timeline(count=1)
+tweet = tweets[0]
+print(f"Liking tweet {tweet.id} of {tweet.author.name}")
+api.create_favorite(tweet.id)
