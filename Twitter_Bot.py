@@ -78,6 +78,11 @@ api.create_favorite(tweet.id)
 for block in api.blocks():
     print(block.name)
 
+# Métodos para pesquisa:
+
+for tweet in api.search(q="Python", lang="en", rpp=10):
+    print(f"{tweet.user.name}:{tweet.text}")
+
 # Módulo de configuração para todos os Bots
 
 # tweepy-bots/bots/config.py
