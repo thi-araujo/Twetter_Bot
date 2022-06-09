@@ -83,6 +83,14 @@ for block in api.blocks():
 for tweet in api.search(q="Python", lang="en", rpp=10):
     print(f"{tweet.user.name}:{tweet.text}")
 
+# Método para tendencias
+# Permite listar as tendências mundiais para qualquerlocalização geográfica
+# Exemplo como listar os trending topics mundiais:
+
+trends_result = api.trends_place(1)
+for trend in trends_result[0]["trends"]:
+    print(trend["name"])
+
 # Módulo de configuração para todos os Bots
 
 # tweepy-bots/bots/config.py
@@ -143,7 +151,7 @@ if __name__ == "__main__":
 
 # Bot para favoritos e retuítes
 
-# Código-fonte do bot completo
+# Código-fonte do bot
 # Ele usa um fluxo para filtrar tweets que contém as palavras "Python ou Tweepy como exemplo, mas pode ser
 # qualquer outra palavra, cada tweet do stream é marcado como curtido e retuídado:
 
