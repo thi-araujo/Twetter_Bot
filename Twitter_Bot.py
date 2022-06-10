@@ -85,11 +85,26 @@ for tweet in api.search(q="Python", lang="en", rpp=10):
 
 # Método para tendencias
 # Permite listar as tendências mundiais para qualquerlocalização geográfica
-# Exemplo como listar os trending topics mundiais:
+# Exemplo como listar os trending topicos mundiais:
 
 trends_result = api.trends_place(1)
 for trend in trends_result[0]["trends"]:
     print(trend["name"])
+
+
+
+# Método para transmissão
+# O streaming faz com que voce observe ativamente os tweets que correspondem a determinados critérios em tempo real. Isso significa que,
+# quando não houver nenhum novo tweet que corresponda aos critérios, o programa aguardará até que um novo tweet seja criado e o processe.
+
+# Para usarmos o streaming, precisamos criar dois objetos:
+
+# O objeto stream usa a API do Twitter para obter tweets que correspondam a alguns critérios. Este objeto é a fonte dos tweets que são
+# processados por um stream listener.
+# O ouvinte de fluxo recebe tweets do fluxo:
+
+
+
 
 # Módulo de configuração para todos os Bots
 
