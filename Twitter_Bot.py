@@ -103,7 +103,31 @@ for trend in trends_result[0]["trends"]:
 # processados por um stream listener.
 # O ouvinte de fluxo recebe tweets do fluxo:
 
+import json
+import tweepy
 
+class MyStreamListener(tweepy.StreamListener):
+    def __init__(self, api):
+        self.api = api
+        self.me = api.me()
+
+    def on_status(self, tweet):
+        print(f"{tweet.user.name}:{tweet.text}")
+
+    def on_error(self, status):
+        print("Error detected")
+
+# Authenticate to Twitter
+auth = tweepy.OAuthHandler("CONSUMER_KEY", "CONSUMER_SECRET")
+auth.set_access_token("ACCESS_TOKEN", "ACCESS_TOKEN_SECRET")
+
+# Create API object
+api = tweepy.API(auth, wait_on_rate_limit=True,
+    wait_on_rate_limit_notify=True)
+
+tweets_listener = MyStreamListener(api)
+stream = tweepy.Stream(api.auth, tweets_listener)
+stream.filter(track=["Python", "Django", "Tweepy"], languages=["en"])
 
 
 # Módulo de configuração para todos os Bots
