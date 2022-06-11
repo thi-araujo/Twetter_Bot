@@ -130,6 +130,15 @@ stream = tweepy.Stream(api.auth, tweets_listener)
 stream.filter(track=["Python", "Django", "Tweepy"], languages=["en"])
 
 
+
+
+# Método para buscar todos os tweets que voce foi mencionado
+# E em seguida marcar cada tweet como curtido e seguir o seu autor
+
+
+
+
+
 # Módulo de configuração para todos os Bots
 
 # tweepy-bots/bots/config.py
