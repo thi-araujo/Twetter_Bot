@@ -133,7 +133,12 @@ stream.filter(track=["Python", "Django", "Tweepy"], languages=["en"])
 
 
 # Método para buscar todos os tweets que voce foi mencionado
-# E em seguida marcar cada tweet como curtido e seguir o seu autor
+# E em seguida marcar cada tweet como curtido e seguir o seu autor:
+
+tweets = api.mentions_timeline()
+for tweet in tweets:
+    tweet.favorite()
+    tweet.user.follow()
 
 
 
