@@ -143,6 +143,9 @@ for tweet in tweets:
 # Obter não somente a primeira página da sua linha do tempo,
 # mas tambem os 100 tweets:
 
+for tweet in tweepy.Cursor(api.home_timeline).items(100):
+    print(f"{tweet.user.name} said: {tweet.text}")
+
 
 
 
