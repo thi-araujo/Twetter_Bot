@@ -140,6 +140,8 @@ for tweet in tweets:
     tweet.favorite()
     tweet.user.follow()
 
+# Obter não somente a primeira página da sua linha do tempo,
+# mas tambem os 100 tweets:
 
 
 
