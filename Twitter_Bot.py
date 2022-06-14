@@ -12,6 +12,10 @@ api = tweepy.API(auth)
 # Criar um tweet
 api.update_status("Vai Corinthians")
 
+# Criar um Tweet
+api.update_status("Meu primeiro tweet")
+
+
 
 import tweepy
 
