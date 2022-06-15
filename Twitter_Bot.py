@@ -67,7 +67,7 @@ print(user.name)
 print(user.description)
 print(user.location)
 
-print("Last 20 Followers:")
+print("Ultimos 20 seguidores:")
 for follower in user.followers():
     print(follower.name)
 
