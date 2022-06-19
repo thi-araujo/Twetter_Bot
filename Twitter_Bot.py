@@ -15,6 +15,8 @@ api.update_status("Vai Corinthians")
 # Criar um Tweet
 api.update_status("Meu primeiro tweet")
 
+# Criar um Tweet
+api.update_status("Hello World")
 
 
 import tweepy
