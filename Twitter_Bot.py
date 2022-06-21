@@ -123,7 +123,7 @@ class MyStreamListener(tweepy.StreamListener):
         print(f"{tweet.user.name}:{tweet.text}")
 
     def on_error(self, status):
-        print("Erro detectado")
+        print("Foi detectado um erro")
 
 # Authenticate to Twitter
 auth = tweepy.OAuthHandler("CONSUMER_KEY", "CONSUMER_SECRET")
