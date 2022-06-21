@@ -1,4 +1,4 @@
-# Bots para Twitter
+# Bots para Twitter (Automação)
 
 import tweepy
 
