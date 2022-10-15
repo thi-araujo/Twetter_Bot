@@ -315,3 +315,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+echo.
+echo 	3� Atualizar icones do desktop
